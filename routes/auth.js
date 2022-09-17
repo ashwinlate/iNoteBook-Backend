@@ -113,4 +113,13 @@ try {
     res.status(500).send("Internal server error");
 }
 })
+
+// Check Auth
+router.post('/verify', fetchuser, async (req, res) => {
+    return res.status(201).json({
+        data : true,
+        status : success
+    });
+})
+
 module.exports = router
